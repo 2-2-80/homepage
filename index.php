@@ -16,7 +16,7 @@
   <p><a href="https://steamcommunity.com/profiles/76561198886529619/" target="_blank">Steam</a></p>
   <!-- footer -->
     <footer>
-    	<p>2+2=80はひぐらしの<span class="aka">な</span>く頃にを応援しています。</p>
+    	<p>2+2=80はひぐらしの<span class="red">な</span>く頃にを応援しています。</p>
 		<p><a href="http://www.oyashirosama.com/" target="_blank"><img src="https://web.archive.org/web/20230501053835/http://www.oyashirosama.com/web/special/ban/600rika.jpg" width="600" height="120" border="0" alt="「ひぐらしのなく頃に」オヤシロさまドットコム"></a>
 		<a href="https://web.archive.org/web/20090425231731/http://www.animate.tv/kakera-musubi/" target="_blank"><img src="https://web.archive.org/web/20230501053835/http://www.oyashirosama.com/web/special/ban/kakera_banner_2.jpg"width="600" height="120" border="0" alt="アニメイトTV WEB -かけらむすび-"></a>
 		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="420" height="150" id="wata_bannea2_l" align="middle">
