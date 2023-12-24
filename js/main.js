@@ -7,7 +7,7 @@ includeHeader.onreadystatechange = function () {
     header.insertAdjacentHTML("afterbegin", headerHTML);
   }
 };
-includeFooter.send();
+includeHeader.send();
 const includeFooter = new XMLHttpRequest();
 includeFooter.open("GET", "include/footer.html", true);
 includeFooter.onreadystatechange = function () {
