@@ -1,4 +1,4 @@
-<footer class="footer">
+document.write('''<footer class="footer">
 <p>2+2=80はひぐらしの<span class="red">な</span>く頃にを応援しています。</p>
 <p><a href="http://www.oyashirosama.com/" target="_blank"><img src="https://web.archive.org/web/20230501053835/http://www.oyashirosama.com/web/special/ban/600rika.jpg" width="600" height="120" border="0" alt="「ひぐらしのなく頃に」オヤシロさまドットコム"></a>
 <a href="https://web.archive.org/web/20090425231731/http://www.animate.tv/kakera-musubi/" target="_blank"><img src="https://web.archive.org/web/20230501053835/http://www.oyashirosama.com/web/special/ban/kakera_banner_2.jpg"width="600" height="120" border="0" alt="アニメイトTV WEB -かけらむすび-"></a>
@@ -18,4 +18,4 @@
 <a href="https://www.mgraveyard.com" target="_blank"><img src="https://web.archive.org/web/20110203082042/http://mgraveyard.com/wp-content/uploads/2010/04/bana.gif" alt="M.Graveyard"></a>
 <a href="https://hinamizawa.net/" target="_blank"><img src="https://hinamizawa.net/200/00.gif" alt="ひぐらしのなく頃に ヒナミザワＴＶ"></a>
 </p>
-</footer>
+</footer>''');
