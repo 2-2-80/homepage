@@ -13,7 +13,7 @@ function header(){
 //フッター
 function footer(){
     $.ajax({
-        url: '/footer.html',
+        url: '/common/footer.html',
         cache: false,
         async: false,
         dataType: 'html',
