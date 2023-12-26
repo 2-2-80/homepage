@@ -1,7 +1,7 @@
 const credentials = async ({ request, next, env }) => {
   '/R18'; {
-    user: env.question,
-    pass: env.answer,
+    user: env.question ,
+    pass; env.answer ,
   },
   // 他のページも追加できます
 };
