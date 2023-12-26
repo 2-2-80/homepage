@@ -1,13 +1,3 @@
-async function account({ env }) {
-  const credentials = {
-    '/R18': {
-      user: env.question,
-      pass: env.answer,
-    },
-    // 他のページも追加できます
-  };
-}
-
 async function errorHandling(context) {
   try {
     return await context.next();
@@ -16,7 +6,15 @@ async function errorHandling(context) {
   }
 }
 
-async function handleRequest({ next, request }) {
+async function handleRequest({ next, request, env }) {
+  const credentials = {
+    '/R18': {
+      user: env.question,
+      pass: env.answer,
+    },
+    // 他のページも追加できます
+  };
+  
   const url = new URL(request.url);
   const pathMatch = Object.keys(credentials).find((path) => url.pathname.startsWith(path));
 
@@ -62,4 +60,4 @@ async function handleRequest({ next, request }) {
   return await next();
 }
 
-export const onRequest = [account, errorHandling, handleRequest];
+export const onRequest = [errorHandling, handleRequest];
