@@ -1,12 +1,11 @@
-const guardByBasicAuth = async ({ request, next, env }) => {
-  if (env.BASIC_AUTH !== 'true') {
-    return await next();
-  }
-  
 const credentials = {
-  '/R18': {
-    user: env.question,
-    pass: env.answer,
+  '/restricted1': {
+    user: 'admin1',
+    pass: 'password1',
+  },
+  '/restricted2': {
+    user: 'admin2',
+    pass: 'password2',
   },
   // 他のページも追加できます
 };
@@ -43,14 +42,22 @@ async function handleRequest({ next, request }) {
       if (index === -1 || /[\0-\x1F\x7F]/.test(decoded)) {
         return new Response('Invalid authorization value.', { status: 400 });
       }
-
+      // Verify credentials
++     const creds = {
++       user: env.BASIC_USERNAME || Credentials.USERNAME,
++       pass: env.BASIC_PASSWORD || Credentials.PASSWORD,
++     };
       const user = decoded.substring(0, index);
       const pass = decoded.substring(index + 1);
 
-      if (credentials[pathMatch].user !== user || credentials[pathMatch].pass !== pass) {
-        return new Response('Invalid credentials.', { status: 401 });
+      if (username !== creds.username || password !== creds.password) {
+        return new Response(
+          "Invalid username or password.",
+          {
+            status: 401,
+          }
+        );
       }
-
       return await next();
     }
 
@@ -65,4 +72,4 @@ async function handleRequest({ next, request }) {
   return await next();
 }
 
-export const onRequest = [errorHandling, handleRequest, guardByBasicAuth];
+export const onRequest = [errorHandling, handleRequest];
