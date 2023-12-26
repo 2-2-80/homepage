@@ -1,5 +1,5 @@
 const credentials = {
-  '/functions/middleware.js': {
+  '/functions/*': {
     user: 'admin1',
     pass: 'password1',
   },
