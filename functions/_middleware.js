@@ -40,13 +40,13 @@ async function handleRequest({ next, request }) {
       }
       // Verify credentials
 +     const creds = {
-+       user: env.question || credentials.user,
-+       pass: env.answer || credentials.pass,
++       user: env.question || credentials[pathMatch].user,
++       pass: env.answer || credentials[pathMatch].pass,
 +     };
       const user = decoded.substring(0, index);
       const pass = decoded.substring(index + 1);
 
-      if (username !== creds.user || password !== creds.pass) {
+      if (credentials[pathMatch].user !== creds.user || credentials[pathMatch].pass !== creds.pass) {
         return new Response(
           "Invalid username or password.",
           {
