@@ -1,7 +1,7 @@
 const credentials = {
   '/R18': {
-    user: env_question,
-    pass: env_answer,
+    user: process.env.question,
+    pass: process.env.answer,
   },
   // 他のページも追加できます
 };
