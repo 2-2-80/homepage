@@ -1,4 +1,4 @@
-const credentials = async ({ request, next, env }) => { {
+const credentials = async ({ request, next, env }) => {
   '/R18': {
     user: env.question,
     pass: env.answer,
