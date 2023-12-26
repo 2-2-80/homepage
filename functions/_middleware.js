@@ -4,10 +4,6 @@ async function account({ env }) {
       user: env.question,
       pass: env.answer,
     },
-    '/restricted2': {
-      user: 'admin2',
-      pass: 'password2',
-    },
     // 他のページも追加できます
   };
 }
