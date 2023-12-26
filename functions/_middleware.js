@@ -1,11 +1,7 @@
 const credentials = {
-  '/restricted1': {
+  '/R18': {
     user: 'admin1',
     pass: 'password1',
-  },
-  '/restricted2': {
-    user: 'admin2',
-    pass: 'password2',
   },
   // 他のページも追加できます
 };
