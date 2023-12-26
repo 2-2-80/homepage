@@ -1,11 +1,7 @@
 const credentials = {
-  '/functions/*': {
-    user: 'admin1',
-    pass: 'password1',
-  },
   '/R18': {
-    user: 'admin2',
-    pass: 'password2',
+    user: '${{ secrets.question }}',
+    pass: '${{ secrets.answer }}',
   },
   // 他のページも追加できます
 };
