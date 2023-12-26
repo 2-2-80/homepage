@@ -1,14 +1,16 @@
-const credentials = {
-  '/restricted1': {
-    user: 'admin1',
-    pass: 'password1',
-  },
-  '/restricted2': {
-    user: 'admin2',
-    pass: 'password2',
-  },
-  // 他のページも追加できます
-};
+async function cr({ env }) {
+  const credentials = {
+    '/restricted1': {
+      user: 'admin1',
+      pass: 'password1',
+    },
+    '/restricted2': {
+      user: 'admin2',
+      pass: 'password2',
+    },
+    // 他のページも追加できます
+  };
+}
 
 async function errorHandling(context) {
   try {
@@ -64,4 +66,4 @@ async function handleRequest({ next, request }) {
   return await next();
 }
 
-export const onRequest = [errorHandling, handleRequest];
+export const onRequest = [cr, errorHandling, handleRequest];
