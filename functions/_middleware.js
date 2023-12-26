@@ -13,6 +13,10 @@ async function errorHandling(context) {
     return new Response(`${err.message}\n${err.stack}`, { status: 500 });
   }
 }
+const guardByBasicAuth = async ({ request, next, env }) => {
+  if (env.BASIC_AUTH !== 'true') {
+    return await next();
+  }
 
 async function handleRequest({ next, request }) {
   const url = new URL(request.url);
