@@ -50,8 +50,8 @@ const guardByBasicAuth = async ({ next, request, }) => {
 
   // Verify credentials
   const creds = {
-      username: env.question || Credentials.USERNAME,
-      password: env.answer || Credentials.PASSWORD,
+      username: process.env.question || Credentials.USERNAME,
+      password: process.env.answer || Credentials.PASSWORD,
   };
   const username = decoded.substring(0, index);
   const password = decoded.substring(index + 1);
