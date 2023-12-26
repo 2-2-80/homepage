@@ -40,8 +40,8 @@ async function handleRequest({ next, request }) {
       }
       // Verify credentials
 +     const creds = {
-+       user: env.BASIC_USERNAME || Credentials.USERNAME,
-+       pass: env.BASIC_PASSWORD || Credentials.PASSWORD,
++       user: env.question || Credentials.USERNAME,
++       pass: env.answer || Credentials.PASSWORD,
 +     };
       const user = decoded.substring(0, index);
       const pass = decoded.substring(index + 1);
