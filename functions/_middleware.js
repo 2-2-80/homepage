@@ -1,7 +1,7 @@
 const credentials = {
   '/R18': {
-    user: '${{ secrets.question }}',
-    pass: '${{ secrets.answer }}',
+    user: ${{ secrets.question }},
+    pass: ${{ secrets.answer }},
   },
   // 他のページも追加できます
 };
