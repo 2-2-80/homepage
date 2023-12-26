@@ -38,22 +38,14 @@ async function handleRequest({ next, request }) {
       if (index === -1 || /[\0-\x1F\x7F]/.test(decoded)) {
         return new Response('Invalid authorization value.', { status: 400 });
       }
-      // Verify credentials
-+     const creds = {
-+       user: env.question || credentials[pathMatch].user,
-+       pass: env.answer || credentials[pathMatch].pass,
-+     };
+
       const user = decoded.substring(0, index);
       const pass = decoded.substring(index + 1);
 
-      if (credentials[pathMatch].user !== creds.user || credentials[pathMatch].pass !== creds.pass) {
-        return new Response(
-          "Invalid username or password.",
-          {
-            status: 401,
-          }
-        );
+      if (credentials[pathMatch].user !== user || credentials[pathMatch].pass !== pass) {
+        return new Response('Invalid credentials.', { status: 401 });
       }
+
       return await next();
     }
 
