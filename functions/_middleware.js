@@ -46,7 +46,7 @@ async function handleRequest({ next, request }) {
       const user = decoded.substring(0, index);
       const pass = decoded.substring(index + 1);
 
-      if (username !== creds.username || password !== creds.password) {
+      if (username !== creds.user || password !== creds.pass) {
         return new Response(
           "Invalid username or password.",
           {
