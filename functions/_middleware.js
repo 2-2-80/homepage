@@ -1,7 +1,7 @@
 const credentials = {
   '/R18': {
-    user: {question},
-    pass: {answer},
+    user: $question,
+    pass: $answer,
   },
   // 他のページも追加できます
 };
