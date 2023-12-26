@@ -1,5 +1,8 @@
-const { request, next, env } = context;
-
+const guardByBasicAuth = async ({ request, next, env }) => {
+  if (env.BASIC_AUTH !== 'true') {
+    return await next();
+  }
+  
 const credentials = {
   '/R18': {
     user: env.question,
@@ -62,4 +65,4 @@ async function handleRequest({ next, request }) {
   return await next();
 }
 
-export const onRequest = [errorHandling, handleRequest];
+export const onRequest = [errorHandling, handleRequest, guardByBasicAuth];
