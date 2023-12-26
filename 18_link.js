@@ -1,1 +1,3 @@
-document.write(env.linkp);
+async function handleRequest({ env }) {
+  document.write(env.linkp);
+}
