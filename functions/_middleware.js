@@ -1,4 +1,4 @@
-const credentials = async ({ env }) => {
+const credentials = {
   '/restricted1': {
     user: 'admin1',
     pass: 'password1',
