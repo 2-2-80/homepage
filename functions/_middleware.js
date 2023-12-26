@@ -1,8 +1,8 @@
-async function cr({ env }) {
+async function account({ env }) {
   const credentials = {
-    '/restricted1': {
-      user: 'admin1',
-      pass: 'password1',
+    '/R18': {
+      user: env.question,
+      pass: env.answer,
     },
     '/restricted2': {
       user: 'admin2',
@@ -66,4 +66,4 @@ async function handleRequest({ next, request }) {
   return await next();
 }
 
-export const onRequest = [cr, errorHandling, handleRequest];
+export const onRequest = [account, errorHandling, handleRequest];
