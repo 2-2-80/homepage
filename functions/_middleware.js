@@ -1,8 +1,8 @@
-const credentials = async ({ request, next, env }) => {
-  '/R18'; {
+const credentials = async ({ env }) => {
+  '/R18': {
     user: env.question ,
-    pass; env.answer ,
-  ,
+    pass: env.answer ,
+  },
   // 他のページも追加できます
 };
 
