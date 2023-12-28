@@ -1,5 +1,5 @@
-const linkguard = async ({ env }) => {
-  return await next();
-  document.write(env.linkp);
+export default {
+  async fetch(request, env, ctx) {
+    document.write(`${env.plink}`);
+  }
 }
-export const onRequest = [linkguard];
