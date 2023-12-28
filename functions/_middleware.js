@@ -8,7 +8,7 @@ async function errorHandling(context) {
 
 async function handleRequest({ next, request, env }) {
   const credentials = {
-    '/R18/': {
+    '/R18': {
       user: env.question,
       pass: env.answer,
     },
