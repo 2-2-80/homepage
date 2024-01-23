@@ -1,6 +1,9 @@
 .red {
   color: red;
 }
+.pink {
+  color: pink;
+}
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #000;
