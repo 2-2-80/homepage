@@ -18,6 +18,15 @@
   <param name="wmode" value="transparent" />
   <embed wmode="transparent" src="bp_rika.swf" quality="high" bgcolor="#ffffff" width="160" height="285" name="Ticker_AN" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
   </object>
+  <script>
+    export async function acRequest(context) {
+    const viewnumber = await context.env.views.get("access-number");
+    let VN = viewnumber != null ? parseInt(value) : 0
+    VN = VN + 1;
+    await context.env.views.put("access-number", `${VN}`);
+    document.write(VN);
+  }
+  </script>
   <footer id="footer"></footer>
   <script src="./js/main.js"></script>
   <script src="./ruffle.js"></script>
