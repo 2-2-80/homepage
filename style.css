@@ -26,7 +26,7 @@ html,body{
   overflow:hidden;
 }
 /**iframeを表示する領域。**/
-.hidari{
+.left{
  width:15%;
  height:100%;
 }
@@ -36,7 +36,7 @@ html,body{
 	width:100%;
 }
 /**右のメインになる画面です。**/
-.migi{
+.right{
  width:85%;
  height:100%;
  overflow-y:scroll;
